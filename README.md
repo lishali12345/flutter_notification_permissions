@@ -22,7 +22,7 @@ In iOS, a permission is `unknown` when the user hasn’t accepted or refuse the 
 ## Requesting Notification Permissions
 If the `PermissionStatus` is `denied` or `unknown`, we can ask the user for the Permissions:
 ```dart
-Future<PermissionStatus> permissionStatus = NotificationPermissions.getNotificationPermissionStatus({NotificationSettingsIos iosSettings, bool openSettings});
+Future<PermissionStatus> permissionStatus = NotificationPermissions.requestNotificationPermissions({NotificationSettingsIos iosSettings, bool openSettings});
 ```
 
 On Android, if the permission is `denied`, this method will open the app settings.
